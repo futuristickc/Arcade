@@ -88,7 +88,7 @@ function takeTurns(clickedCell, clickedCellIndex) {
 }
 
 function changePlayers() {
-    currentPlayer = currentPlayer === state.players[0] ? state.players[1] : state.players[0];
+    currentPlayer = currentPlayer === state.players[0] ? state.players[1] : state.players[0]; //this is where I am getting the text inside the cell.. can'f figure out how to just show X and O
     whosTurn.innerHTML = currentPlayerTurn();
 }
 
