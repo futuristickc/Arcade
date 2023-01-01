@@ -1,70 +1,37 @@
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 body {
     background-color: blue;
-    margin: 0;
+    /* margin: 0; */
+    display: flex;
+    justify-content: center;
 }
 
-.messagesection {
+/* .messagesection {
     height: 50px;
-    /*width: 50px;*/
+    //width: 50px;
     color: white;
     font-weight: bolder;
     font-size: 20px;
     text-align: center;
-}
+ } */
 
-.thegameboard {
-    position: absolute;
-    top: 50%;
+#board {
+    display: flex;
+    /* position: absolute; */
+    /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    height: 300px;
+    height: 300px; */
+    flex-wrap: wrap;
+    width: 80vh;
 }
 
-.rows {
-    height: 32%;
-}
-
-.col {
-    height: 100%;
-    width: 32%;
-    border: 2px solid white;
-    float: left;
-    font-size: 70px;
-    font-weight: bolder;
-    color: white;
-    text-align: center;
-}
-
-.winning-message {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: grey;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: red;
-    font-size: 50px;
-}
-
-.winning-message button {
-    background-color: yellow;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.winning-message button:hover {
-    background-color: white;
-}
-
-.winning-message.show {
-    display: flex;
+.cell {
+    width: 20vh;
+    height: 20vh;
+    border: 2px solid black;
 }

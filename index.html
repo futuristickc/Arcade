@@ -11,38 +11,23 @@
 </head>
 
 <body>
-    <h1>
-        TicTacToe
-    </h1>
-    <div class="messagesection">
-        It is Player 1's turn
-    </div>
-    <!--creating the board with div below//-->
-    <div class="thegameboard" id="thegameboard">
-        <!--creating another div for the rows-->
-        <div class="rows">
-            <!--creating another div for the columns
-            then reapeating the step to get 3 rows and 3 columns-->
-            <div class="col" [00]></div>
-            <div class="col" [01]></div>
-            <div class="col" [02]></div>
-        </div>
-        <div class="rows">
-            <div class="col" [10]></div>
-            <div class="col" [11]></div>
-            <div class="col" [12]></div>
-        </div>
-        <div class="rows">
-            <div class="col" [20]></div>
-            <div class="col" [21]></div>
-            <div class="col" [22]></div>
-        </div>
+    <section>
+        <h1 class="title">TicTacToe</h1>
+        <main id="board">
+            <!-- <div data-cell-index="0" class="cell"></div>
+            <div data-cell-index="1" class="cell"></div>
+            <div data-cell-index="2" class="cell"></div>
+            <div data-cell-index="3" class="cell"></div>
+            <div data-cell-index="4" class="cell"></div>
+            <div data-cell-index="5" class="cell"></div>
+            <div data-cell-index="6" class="cell"></div>
+            <div data-cell-index="7" class="cell"></div>
+            <div data-cell-index="8" class="cell"></div> -->
+        </main>
+        <h2 class="playerTurn"></h2>
+        <button class="restart">Restart Game</button>
+    </section>
 
-    </div>
-    <div class="winning-message" id="winningMessage">
-        <div data-winning-message-text></div>
-        <button id="restartButton">Restart</button>
-    </div>
 </body>
 
 </html>
