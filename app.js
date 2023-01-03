@@ -5,13 +5,18 @@ const restart = document.querySelector('.restart');
 
 
 //*********** STATE **************
-let state = {};
+let state = {
+    board: ["", "", "", "", "", "", "", "", ""],
+    players: ['', ''],
+    mark: ["X", "O"]
+};
 const resetState = () => {
     state.board = ["", "", "", "", "", "", "", "", ""];
     state.players = ['', ''];
 };
 
-let currentPlayer = state.player;
+let currentPlayer;
+let currentMark = state.mark[0];
 /*let currentPlayer = () => {
     Math.floor(Math.random() * whosTurn.length);
     whosTurn[chooseRandom].classList.toggle('selected');
@@ -84,7 +89,8 @@ const renderPlayer = () => {
 //*********** HELPER FUNCTIONS **************
 function takeTurns(clickedCell, clickedCellIndex) {
     state.board[clickedCellIndex] = currentPlayer;
-    clickedCell.innerHTML = currentPlayer;
+    clickedCell.innerHTML = currentMark;
+    currentMark = currentMark === state.mark[0] ? state.mark[1] : state.mark[0];
 }
 
 function changePlayers() {
@@ -142,6 +148,7 @@ function restartGame() {
     gameActive = true;
     const cells = document.querySelectorAll('.cell')
     currentPlayer = state.players[0];
+    currentMark = state.mark[0];
     state.board = ["", "", "", "", "", "", "", "", ""];
     whosTurn.innerHTML = currentPlayerTurn();
     cells.forEach(cell => cell.innerHTML = "");
@@ -168,6 +175,7 @@ whosTurn.addEventListener('click', (event) => {
         //console.log('this is the value: ', player1Value);
         //console.log('this is the value: ', player2Value);
 
+        currentPlayer = state.players[0];
         render();
     }
 });
